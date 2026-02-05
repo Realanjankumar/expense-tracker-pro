@@ -29,15 +29,19 @@
       <input type="number" id="amount" placeholder="Amount ₹" required />
       <input type="date" id="date" required />
       
-      <select id="category">
-        <option>Food</option>
-        <option>Travel</option>
-        <option>Shopping</option>
-        <option>Other</option>
-      </select>
+     <select id="category">
+  <option>Food</option>
+  <option>Travel</option>
+  <option>Shopping</option>
+  <option value="custom">Custom</option>
+</select>
 
-      <button type="submit">Add</button>
-    </form>
+<input
+  type="text"
+  id="customCategory"
+  placeholder="Enter category"
+  style="display:none"
+/>
 
     <select id="filter">
       <option value="All">All Categories</option>
@@ -66,4 +70,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
