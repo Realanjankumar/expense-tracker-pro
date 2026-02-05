@@ -1,3 +1,5 @@
+const categorySelect = document.getElementById("category");
+const customCategoryInput = document.getElementById("customCategory");
 const form = document.getElementById("expense-form");
 const list = document.getElementById("expense-list");
 const totalEl = document.getElementById("total");
@@ -18,7 +20,11 @@ form.addEventListener("submit", e => {
     id: Date.now(),
     title: title.value,
     amount: +amount.value,
-    category: category.value,
+   category:
+  category.value === "custom"
+    ? customCategoryInput.value
+    : category.value,
+
     date: date.value
   });
 
@@ -84,4 +90,5 @@ function drawChart(data) {
     x += 80;
   });
 }
+
 
