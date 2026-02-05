@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Expense Tracker Pro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+    <header>
+      <h1>💸 Expense Tracker Pro</h1>
+      <button id="themeToggle">🌙</button>
+    </header>
+
+    <section class="summary">
+      <div class="card">
+        <h3>Total Expenses</h3>
+        <p>₹<span id="total">0</span></p>
+      </div>
+      <div class="card">
+        <h3>This Month</h3>
+        <p>₹<span id="monthlyTotal">0</span></p>
+      </div>
+    </section>
+
+    <form id="expense-form">
+      <input type="text" id="title" placeholder="Expense name" required />
+      <input type="number" id="amount" placeholder="Amount ₹" required />
+      <input type="date" id="date" required />
+      
+      <select id="category">
+        <option>Food</option>
+        <option>Travel</option>
+        <option>Shopping</option>
+        <option>Other</option>
+      </select>
+
+      <button type="submit">Add</button>
+    </form>
+
+    <select id="filter">
+      <option value="All">All Categories</option>
+      <option>Food</option>
+      <option>Travel</option>
+      <option>Shopping</option>
+      <option>Other</option>
+    </select>
+
+    <canvas id="chart" width="600" height="250"></canvas>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>₹</th>
+          <th>Category</th>
+          <th>Date</th>
+          <th>❌</th>
+        </tr>
+      </thead>
+      <tbody id="expense-list"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
